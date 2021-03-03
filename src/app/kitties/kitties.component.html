@@ -1,0 +1,24 @@
+<h2>Arx Characters as Kitties!</h2>
+<h3>Drawn by Crawfish, edited into icons by Sorrel</h3>
+<p>Upload these to your Discord server to better express yourself in Arvum's most feline manner!</p>
+<ul class="kitties">
+    <li *ngFor="let kitty of kitlist"
+    [class.selected]="kitty === selectedKitty"
+    (click)="onSelect(kitty)">
+    <span class="badge">></span> {{kitty.name}}
+    </li>
+</ul>
+
+<div>
+    <p *ngIf='!selectedKitty'>Please pick a character to view their kitty.</p>
+    <div class="card" *ngIf='selectedKitty'>
+        <img [src]="originalSrc" alt="selectedKitty.name">
+        <div class="container">
+            <p>{{selectedKitty.name}} as originally drawn</p>
+        </div>
+        <img [src]="iconSrc" alt="selectedKitty.name">
+        <div class="container">
+            <p>{{selectedKitty.name}} as an emoji</p>
+        </div>
+    </div>
+</div>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "arx-kitties"
+    }
+  },
+  "defaultProject": "arx-kitties",
+  "cli": {
+    "analytics": "c1a0dc85-d746-41fe-a594-8d0544d62408"
+  }
 }
